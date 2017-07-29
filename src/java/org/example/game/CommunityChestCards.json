@@ -1,0 +1,100 @@
+{"cards":[
+
+    {
+        "Description": "Advance to Go.",
+        "Action": "Move",
+        "Value": 0
+    },
+
+    {
+        "Description": "Bank error in your favor -  Collect $200.",
+        "Action": "Collect",
+        "Value": 200
+    },
+    
+    {
+        "Description": "Doctor's fees - Pay $50.",
+        "Action": "Pay",
+        "Value": 50
+    },
+
+    {
+        "Description": "From sale of stock you get $50.",
+        "Action": "Collect",
+        "Value": 50
+    },
+
+    {
+        "Description": "Get Out of Jail Free.",
+        "Action": "GetOutOfJail",
+        "Value": 0
+    },
+
+    {
+        "Description": "Go to Jail - Go directly to jail - Do not pass Go - Do not collect $200.",
+        "Action": "GoToJail",
+        "Value": 0
+    },
+
+    {
+        "Description": "Grand Opera Night - Collect $50 from every player for opening night seats.",
+        "Action": "CollectPlayer",
+        "Value": 50
+    },
+
+    {
+        "Description": "Holiday Fund matures - Receive $100.",
+        "Action": "Collect",
+        "Value": 100
+    },
+
+    {
+        "Description": "Income tax refund - Collect $20.",
+        "Action": "Collect",
+        "Value": 20
+    },
+
+    {
+        "Description": "It is your birthday - Collect $10.",
+        "Action": "Collect",
+        "Value": 10
+    },
+
+    {
+        "Description": "Life insurance matures - Collect $100.",
+        "Action": "Collect",
+        "Value": 100
+    },
+
+    {
+        "Description": "Pay hospital fees of $100.",
+        "Action": "Pay",
+        "Value": 100
+    },
+
+    {
+        "Description": "Pay school fees of $150.",
+        "Action": "Pay",
+        "Value": 150
+    },
+
+    {
+        "Description": "Receive $25 consultancy fee.",
+        "Action": "Collect",
+        "Value": 25
+    },
+
+    {
+        "Description": "You have won second prize in a beauty contest - Collect $10.",
+        "Action": "Collect",
+        "Value": 10
+    },
+
+    {
+        "Description": "You inherit $100.",
+        "Action": "Collect",
+        "Value": 100
+    }
+]
+}
+

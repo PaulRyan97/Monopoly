@@ -1,0 +1,99 @@
+{"cards":[
+
+    {
+        "Description": "Advance to Go.",
+        "Action": "Move",
+        "Value": 0
+    },
+
+    {
+        "Description": "Advance to ///Last Red/// - If you pass Go, collect $200.",
+        "Action": "Move",
+        "Value": 24
+    },
+
+    {
+        "Description": "Advance to ///First Pink/// ⠉f you pass Go, collect $200.",
+        "Action": "Move",
+        "Value": 11
+    },
+
+    {
+        "Description": "Advance token to nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times the amount thrown.",
+        "Action": "MoveSpecial",
+        "Value": 0
+    },
+
+    {
+        "Description": "Advance token to the nearest Railroad and pay owner twice the rental to which he/she {he} is otherwise entitled. If Railroad is unowned, you may buy it from the Bank.",
+        "Action": "MoveSpecial",
+        "Value": 1
+    },
+
+    {
+        "Description": "Advance token to the nearest Railroad and pay owner twice the rental to which he/she {he} is otherwise entitled. If Railroad is unowned, you may buy it from the Bank.",
+        "Action": "MoveSpecial",
+        "Value": 1
+    },
+
+    {
+        "Description": "Bank pays you dividend of $50.",
+        "Action": "Collect",
+        "Value": 50
+    },
+
+    {
+        "Description": "Get out of Jail Free.",
+        "Action": "GetOutOfJail",
+        "Value": 0
+    },
+
+    {
+        "Description": "Go Back 3 Spaces.",
+        "Action": "MoveBack",
+        "Value": 3
+    },
+
+    {
+        "Description": "Go to Jail - Go directly to jail - Do not pass Go - Do not collect $200.",
+        "Action": "GoToJail",
+        "Value": 0
+    },
+
+    {
+        "Description": "Pay poor tax of $15.",
+        "Action": "Pay",
+        "Value": 15
+    },
+
+    {
+        "Description": "Take a trip to Kent Station - If you pass Go, collect $200.",
+        "Action": "Move",
+        "Value": 5
+    },
+
+    {
+        "Description": "Take a walk on around Blarney Castle - Advance token to Blarney Castle.",
+        "Action": "Move",
+        "Value": 39
+    },
+
+    {
+        "Description": "You have been elected Chairman of the Board - Pay each player $50.",
+        "Action": "PayEach",
+        "Value": 50
+    },
+
+    {
+        "Description": "Your building and/or loan matures - Collect $150.",
+        "Action": "Collect",
+        "Value": 150
+    },
+
+    {
+        "Description": "You have won a crossword competition.",
+        "Action": "Collect",
+        "Value": 100
+    }
+]
+}

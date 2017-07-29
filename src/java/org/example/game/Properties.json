@@ -1,0 +1,229 @@
+{"properties":[
+	{
+	"Position":1,
+	"PropertyID":0,
+	"Name":"Cork City Gaol",
+	"Cost": 60,
+	"Rent": 2
+	},
+
+	{
+	"Position":3,
+	"PropertyID":1,
+	"Name":"Mizen Head",
+	"Cost": 60,
+	"Rent": 4
+	},
+
+	{
+	"Position":5,
+	"PropertyID":2,
+	"Name":"Kent Station",
+	"Cost": 200,
+	"Rent": 25
+	},
+
+	{
+	"Position":6,
+	"PropertyID":3,
+	"Name":"Cork Opera House",
+	"Cost": 100,
+	"Rent": 6
+	},
+
+	{
+	"Position":8,
+	"PropertyID":4,
+	"Name":"Trabolgan Holiday Village",
+	"Cost": 100,
+	"Rent": 6
+	},
+
+	{
+	"Position":9,
+	"PropertyID":5,
+	"Name":"English Market",
+	"Cost": 120,
+	"Rent": 8
+	},
+
+	{
+	"Position":11,
+	"PropertyID":6,
+	"Name":"Cork Racecourse Mallow",
+	"Cost": 140,
+	"Rent": 10
+	},
+
+	{
+	"Position":12,
+	"PropertyID":7,
+	"Name":"Electric Company",
+	"Cost": 150,
+	"Rent": 0
+	},
+
+	{
+	"Position":13,
+	"PropertyID":8,
+	"Name":"Kinsale Golf Club",
+	"Cost": 140,
+	"Rent": 10
+	},
+
+	{
+	"Position":14,
+	"PropertyID":9,
+	"Name":"Munster Rugby",
+	"Cost": 160,
+	"Rent": 12
+	},
+
+	{
+	"Position":15,
+	"PropertyID":10,
+	"Name":"Parnell Place Bus Station",
+	"Cost": 200,
+	"Rent": 25
+	},
+
+	{
+	"Position":16,
+	"PropertyID":11,
+	"Name":"St.Patrick's Street",
+	"Cost": 180,
+	"Rent": 14
+	},
+
+	{
+	"Position":18,
+	"PropertyID":12,
+	"Name":"Opera Lane",
+	"Cost": 180,
+	"Rent": 14
+	},
+
+	{
+	"Position":19,
+	"PropertyID":13,
+	"Name": "Merchant's Quay Shopping Centre",
+	"Cost": 200,
+	"Rent": 16
+	},
+
+
+	{
+	"Position":21,
+	"PropertyID":14,
+	"Name": "Blackrock Castle",
+	"Cost": 220,
+	"Rent": 18
+	},
+
+	{
+	"Position":23,
+	"PropertyID":15,
+	"Name": "Irish Examiner",
+	"Cost": 220,
+	"Rent": 18
+	},
+
+	{
+	"Position":24,
+	"PropertyID":16,
+	"Name": "Fota Wildlife Park",
+	"Cost": 240,
+	"Rent": 20
+	},
+
+	{
+	"Position":25,
+	"PropertyID":17,
+	"Name": "Cork Airport",
+	"Cost": 200,
+	"Rent": 25
+	},
+
+	{
+	"Position":26,
+	"PropertyID":18,
+	"Name": "Cork Butter Museum",
+	"Cost": 260,
+	"Rent": 22
+	},
+
+	{
+	"Position":27,
+	"PropertyID":19,
+	"Name": "City Hall",
+	"Cost": 260,
+	"Rent": 22
+	},
+
+	{
+	"Position":28,
+	"PropertyID":20,
+	"Name": "Lifetime Lab",
+	"Cost": 150,
+	"Rent": 0
+	},
+
+	{
+	"Position":29,
+	"PropertyID":21,
+	"Name": "University College Cork",
+	"Cost": 280,
+	"Rent": 24
+	},
+
+	{
+	"Position":31,
+	"PropertyID":22,
+	"Name": "Jameson Visitor Centre",
+	"Cost": 300,
+	"Rent": 26
+	},
+
+	{
+	"Position":32,
+	"PropertyID":23,
+	"Name": "Fota House Arboretum & Gardens",
+	"Cost": 300,
+	"Rent": 26
+	},
+
+	{
+	"Position":34,
+	"PropertyID":24,
+	"Name": "Cobh Heritage Centre",
+	"Cost": 320,
+	"Rent": 28
+	},
+
+	{
+	"Position":35,
+	"PropertyID":25,
+	"Name": "Port of Cork",
+	"Cost": 200,
+	"Rent": 25
+	},
+
+	{
+	"Position":37,
+	"PropertyID":26,
+	"Name": "Shandon Bells",
+	"Cost": 350,
+	"Rent": 35
+	},
+
+
+	{
+	"Position":39,
+	"PropertyID":27,
+	"Name": "Blarney Castle",
+	"Cost": 400,
+	"Rent": 50
+	}
+
+]
+}

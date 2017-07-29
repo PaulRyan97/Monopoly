@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monopoly</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="home.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+</head>
+<body>
+	<div id="homeWrapper">
+        <h1>Play Monopoly</h1>
+        <p>Welcome to Monopoly. Click the Add button to start playing.</p>
+        <div id="addPlayer">
+            <form id="addPlayerForm">
+                <span>Name: <input type="text" name="player_name" id="player_name"></span>
+                <input type="button" class="button" value="Add" onclick=formSubmit()>
+            </form>
+        </div>
+        <br />
+<!--         <h3>Current Players:</h3>
+                <div id="content">
+            </div> -->
+    </div>
+
+    <div id="interfaceWrapper" style="display: none;">
+        <div id="topWrapper">
+            <h1 id="monopoly">MONOPOLY</h1>
+            <div id="stats" class="w3-card-8">
+                Name: <span id="Name"></span> <br/>
+                ID: <span id="Id"></span> <br/>
+                Position: <span id="Position"></span> <br/>
+                Money: <span id="Money"></span> <br/>
+            </div>
+        </div>
+        
+        <div id="middleNotifications">
+
+        <div id="diceTurnWrapper">
+            <input id="rollDice" type="button" class="button" value="Roll Dice" onclick=rollDice() style="display: none;">
+            <input id="endTurn" type="button" class="button" value="End Turn" onclick=endTurn() style="display: none;">
+
+            <div id="currentplayers"></div>
+        </div>
+            
+        <div id="content">
+        <div id="startGame" style="display: none;">
+            <form id="startGameForm">
+                <input type="button" class="button" value="Start Game" onclick=startGame()>
+            </form>
+        </div>
+        <div id="AuctionBox" style="display: none;">
+        <!-- <div id="AuctionBox"> -->
+            <form id="BidYesNo">
+                <h3>Current bid: <span id="currentBid"></span></h3>
+                New bid - <input id="auctionBid" type="number" name="quantity" min="1">
+                <input type="button" class="button" value="Submit Bid" onclick=submitBid(this)>
+                <br/>
+                <!-- <input type="number" name="quantity" min="1" max="5"> -->
+                I do not wish to make a bid - <input type="button" class="button" value="Confirm" onclick=passOnAuction(this)>
+            </form>
+        </div>
+
+            <div id="NotificationBox" style="display: none;">
+                <form id="Notify">
+                Not your turn.
+                </form>
+            </div>
+             <div id="PayFee" style="display: none;">
+                <form id="PayFeeYesNo">
+                    I choose to pay the fee -
+                    <input type="button" class="button" value="Yes" onclick=payFee(this)>
+                    <br/>
+                    I cannot pay and must withdraw -
+                    <input type="button" class="button" value="Withdraw from game" onclick=withdraw(this)>
+                </form>
+            </div>
+
+            <div id="PurchaseProperty" style="display: none;">
+                <form id="BuyYesNo">
+                    I wish to purchase this property -
+                    <span id="buyPropertOption"><input type="button" id="buyPropertyButton" class="button" value="Purchase" onclick=buyProperty()></span>
+                    <input type="button" class="button" value="Pass" onclick=passOnProperty()>
+                </form>
+            </div>
+        </div>
+        </div>   
+            
+        
+        <div id="log" class="w3-card-8">
+            <h3>Log</h3><br/>
+            <!--<span>Comment: <input type="text" name="comment" id="comment" onkeydown="search(this)"></span>-->
+            <form id="chat">
+                <input type="text" id="player_chat" placeholder="Send Message">
+                <input type="button" class="button" value="Chat" onclick=sendMessage()>
+            </form>
+            <div id="logDisplay" class="w3-card-8">
+                
+            </div>
+        </div>
+        
+        <div id="boardandcard">
+        <div id="monopolyBoard">
+            <img id="Image-Maps-Com-image-maps-2017-02-25-211157" src="http://cs1.ucc.ie/~rmme1/Monopoly/images/CorkMonopolyBoard.png" width="769" height="770" usemap="#image-maps-2017-02-25-211157" alt=""/>
+            <map name="image-maps-2017-02-25-211157" id="ImageMapsCom-image-maps-2017-02-25-211157">
+            <area  alt="" data-tile-type="1" title="Cork City Gaol and Heritage Centre" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="605,669,670,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="2" title="Community Chest" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="542,669,606,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="3" title="Mizen Head" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="478,669,543,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="4" title="Income Tax" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="415,670,480,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="5" title="Kent Station" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="352,670.0000305175781,417,770.0000305175781" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="6" title="Cork Opera House" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="289,670.0000305175781,354,770.0000305175781" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="7" title="Chance" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="225,670.0000305175781,290,770.0000305175781" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="8" title="Trablogan Holiday Village" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="162,670,227,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="9" title="The English Market" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="99,670,164,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="11" title="Cork Racecourse Mallow" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,606,100,671" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="12" title="Electric Company" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,544,100,609" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="13" title="Kinsale Golf Club" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,480,100,545" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="14" title="Munster Rugby" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,417,100,482" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="15" title="Parnell Place Bus Station" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,354,100,419" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="16" title="St Patrick's Street" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,290.00000381469727,100,355.00000381469727" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="17" title="Community Chest" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,227,100,292" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="18" title="Opera Lane" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,164,101,228" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="19" title="Merchants Quay Shopping Centre" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,100,101,164" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="21" title="Blackrock Castle" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="99,0,163,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="22" title="Chance" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="162,0,226,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="23" title="Irish Examiner" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="226,0,290,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="24" title="Fota Wildlife Park" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="289,0,353,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="25" title="Cork Airport" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="352,0,416,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="26" title="Cork Butter Museum" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="415,0,479,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="27" title="City Hall" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="479,0,543,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="28" title="The Lifetime Lab" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="542,0,606,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="29" title="University College Cork" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="605,0,669,102" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="31" title="Jameson Visitor Centre" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="669,100,769,165" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="32" title="Fota House Arboretum &amp; Gardens" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="668,164,769,229" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="33" title="Community Chest" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="669,227,769,292" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="34" title="Cobh Heritage Centre" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="669,291,769,356" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="35" title="Port of Cork" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="669,354,769,419" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="36" title="Chance" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="668,418,769,481" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="37" title="Shandon Bells" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="668,480,769,544" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="38" title="Bank Deposit" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="669,544,769,608" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="39" title="Blarney Castle" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="668,606,769,671" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="0" title="GO" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="668,670,769,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="10" title="Jail" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,669,100,770" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="20" title="Free Parking" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="0,0,100,101" style="outline:none;" target="_self"     />
+            <area  alt="" data-tile-type="30" title="Go To Jail" href=""  onclick="sendForCardInfo(this);return false;" shape="rect" coords="668,0,769,101" style="outline:none;" target="_self"     />
+            <!-- <area shape="rect" coords="767,768,769,770" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_82244" /> -->
+            </map>
+
+        </div>
+
+        <div id="card">Click a tile to find out more info.</div>
+        </div>
+
+        <div id="propertySection">
+            <h4>My Properties</h4>
+            <div id="listOfProperties">
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
